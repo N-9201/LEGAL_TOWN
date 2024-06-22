@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Town - القوانين</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #121212; /* خلفية سوداء */
+            color: #ffffff; /* نص أبيض */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ff6600; /* خلفية برتقالية */
+        }
+        header img {
+            height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #000000;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* تم تعديل هذا ليكون المحتوى على اليمين */
+            padding: 50px 20px;
+            text-align: right; /* تم تعديل هذا ليكون النص محاذي لليمين */
+        }
+        main h1 {
+            font-size: 3em;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        main p {
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .button {
+            background-color: #ff6600;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            display: block;
+            text-align: center;
+            align-self: flex-end; /* تم تعديل هذا ليكون الزر على اليمين */
+        }
+        .button:hover {
+            background-color: #e65c00;
+        }
+        #discord-rules, #crime-rules {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ff6600;
+            background-color: #1f1f1f;
+            max-width: 600px;
+            text-align: right;
+        }
+        footer {
+            background-color: #ff6600;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative; /* تمت إضافة هذا لضبط التصميم */
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.8em;
+            color: #ffffff;
+        }
+        footer img {
+            width: 200px; /* تم تعديل هذا لضبط حجم الصورة */
+            height: auto;
+            margin-top: 20px;
+            position: absolute; /* تمت إضافة هذا لضبط التصميم */
+            bottom: 10px; /* تمت إضافة هذا لضبط التصميم */
+            left: 50%; /* تمت إضافة هذا لضبط التصميم */
+            transform: translateX(-50%); /* تمت إضافة هذا لضبط التصميم */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://media.discordapp.net/attachments/1242858776390799421/1253083363959509122/logo_512.png?ex=66749053&is=66733ed3&hm=ede88db9e9351d52a7b412b4a44f39239c244c1804f15939e7ba3a0fef8a3ee5&=&format=webp&quality=lossless" alt="شعار الموقع">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="rules.html">القوانين</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>قوانين Legal Town</h1>
+        <button class="button" onclick="toggleRules('discord-rules')">قوانين الديسكورد</button>
+        <div id="discord-rules">
+            <p>
+                [1] - احترام الجميع و عدم السب و اهانة اي شخص  مهما كانت الظروف ولو بطريقة غير
+                مباشرة<br>
+                [2] - عدم وضع الروابط او وضع روابط تحتوي دعوات لسيرفرات اخرى<br>
+                [3] - عدم التدخل في شؤون الاخرين او شخصنة الحوارات<br>
+                [4] - عدم الخوض بالامور الدينية او السياسية او التطرق لها بأي شكل من الاشكال<br>
+                [5] - تعدد الحسابات غير مسموح به ، إمتلاك أكثر من حساب ديسكورد في السيرفر عليها باند نهائي<br>
+                [6] - يمنع انتحال الشخصيات الإدارية ومن يخالف القانون هذا سوف يتبند<br>
+                [7] - يمنع السخرية والإستهزاء من الآخرين ، وسيتم منعه من الكتابة بجميع الشاتات واذا تكرر الامر قد تصل الى التحذير<br>
+                [8] - يمنع الاستفسار بالشات العام ، عندك استفسار او سؤال توجه الى الدعم الفني
+                ( في حال انك خالفت راح يجيك ميوت )
+            </p>
+        </div>
+        <button class="button" onclick="toggleRules('crime-rules')">قوانين الإجرام</button>
+        <div id="crime-rules">
+            <p>
+                [1] - يجب عليك فهم معنى الحياة الواقعية سواء كنت مجرم او رهينة وذلك بقياسها بالحياة الواقعية<br>
+                [2] - يمنع الاتفاق مع اي شخص ليصبح رهينة<br>
+                [4] - مدة تحتسب للاجرام هي بعد قيام جرم بسبب المجازفات الي خالف القانون الصراحة<br>
+                [5] - السجن غير مسموح به امتلاك أكثر من حساب ديسكورد ليخفي به اذا كنت طلب غير مسموح بها<br>
+                [6] - يمنع انتحال الشخصيات الإدارية ومن يخالف القانون هذا سوف يتبند<br>
+                [7] - يمنع الاستفسار عن الاحكام ولا يتنزل عليه ميوت واذا تكرر ميوت<br>
+                [8] - السجن مسموح مدة القيام جريمه واذا حدث عن اذا تكررت في النتائج
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>Legal Town &copy; 2024 جميع الحقوق محفوظة</p>
+        <img src="https://media.discordapp.net/attachments/1242858776390799421/1253083363959509122/logo_512.png?ex=66749053&is=66733ed3&hm=ede88db9e9351d52a7b412b4a44f39239c244c1804f15939e7ba3a0fef8a3ee5&=&format=webp&quality=lossless" alt="شعار الموقع">
+    </footer>
+    <script>
+        function toggleRules(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>

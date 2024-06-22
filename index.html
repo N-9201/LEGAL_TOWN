@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Town - الرئيسية</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: #121212; /* خلفية سوداء */
+            color: #ffffff; /* نص أبيض */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ff6600; /* خلفية برتقالية */
+        }
+        header img {
+            height: 50px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #000000;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        main h1 {
+            font-size: 3em;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        main p {
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .discord-link {
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .discord-link:hover {
+            color: #ffffff;
+        }
+        footer {
+            background-color: #ff6600;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.8em;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://media.discordapp.net/attachments/1242858776390799421/1253083363959509122/logo_512.png?ex=66749053&is=66733ed3&hm=ede88db9e9351d52a7b412b4a44f39239c244c1804f15939e7ba3a0fef8a3ee5&=&format=webp&quality=lossless" alt="شعار الموقع">
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="rules.html">القوانين</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Legal Town - سيرفر لايف للحياة الواقعية</h1>
+        <p>مرحبًا بكم في Legal Town، سيرفر الحياة الواقعية حيث يمكنكم الاستمتاع بتجربة مثيرة وحقيقية.</p>
+        <p>للدخول إلى الديسكورد <a class="discord-link" href="https://discord.com" target="_blank">اضغط هنا</a></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Legal Town. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>
